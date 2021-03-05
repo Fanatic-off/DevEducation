@@ -241,7 +241,7 @@ namespace HomeWork
             int A12 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое положительное число");
-            int B12 = Convert.ToInt32(Console.ReadLine());
+            int B11 = Convert.ToInt32(Console.ReadLine());
 
             int resultA = 0;
             int resultB = 0;
@@ -252,9 +252,9 @@ namespace HomeWork
             for (int i = 10; i < A12 * 10; i *= 10)
             {
                 resultA = (A12 % i) / (i / 10);
-                for (int j = 10; j < B12 * 10; j *= 10)
+                for (int j = 10; j < B11 * 10; j *= 10)
                 {
-                    resultB = (B12 % j) / (j / 10);
+                    resultB = (B11 % j) / (j / 10);
                     if (resultA == resultB)
                     {
                         Console.WriteLine(yes);
