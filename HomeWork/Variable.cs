@@ -1,23 +1,23 @@
 ﻿using System;
 
-public class Variable
+namespace HomeWork
 {
-	public Variable()
-	{
+	class Variable
+    {
 		static void Main(string[] args)
-        {
-            //Пользователь вводит 2 числа(A и B).Выведите в консоль решение (5 * A + B*B)/(B - A)
-            Console.WriteLine("Введите первое целое число");
-            int A = Convert.ToInt32(Console.ReadLine());
+		{
+			//Пользователь вводит 2 числа(A и B).Выведите в консоль решение (5 * A + B*B)/(B - A)
+			Console.WriteLine("Введите первое целое число");
+			int A1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Введите второе целое число");
-            int B = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Введите второе целое число");
+			int B1 = Convert.ToInt32(Console.ReadLine());
 
-            int result = (5 * A + B * B) / (B - A);
-            Console.WriteLine($"{result}");
+			int result = (5 * A1 + B1 * B1) / (B1 - A1);
+			Console.WriteLine($"{result}");
 
-            //Пользователь вводит 2 значения(A и B).Поменяйте содержимое переменных A и B местами.
-            Console.WriteLine("Введите целое число A");
+			//Пользователь вводит 2 значения(A и B).Поменяйте содержимое переменных A и B местами.
+			Console.WriteLine("Введите целое число A");
 			int A2 = Convert.ToInt32(Console.ReadLine());
 
 			Console.WriteLine("Введите второе целое число B");
@@ -52,7 +52,21 @@ public class Variable
 
 			//Пользователь вводит 4 числа(X1, Y1, X2, Y2), описывающие координаты 2 - х точек на координатной плоскости.
 			//	Выведите уравнение прямой в формате Y = AX + B, проходящей через эти точки.
+			Console.WriteLine("Введите координату X1");
+			double X1 = Convert.ToInt32(Console.ReadLine());
 
+			Console.WriteLine("Введите координату Y1");
+			double Y1 = Convert.ToInt32(Console.ReadLine());
+
+			Console.WriteLine("Введите координату X2");
+			double X2 = Convert.ToInt32(Console.ReadLine());
+
+			Console.WriteLine("Введите координату Y2");
+			double Y2 = Convert.ToInt32(Console.ReadLine());
+
+			//A = (y1 - y2) / (x1 - x2)
+			//B = y2 - A*x2
+			Console.WriteLine($"уравнение имеет вид: Y = {(Y1 - Y2) / (X1 - X2)}X + {Y2 - ((Y1 - Y2) / (X1 - X2)) * X2}";
 
 		}
 	}
