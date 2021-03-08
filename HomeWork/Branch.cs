@@ -130,7 +130,32 @@ namespace HomeWork
                 }
             }
 
-            //Пользователь вводит 3 числа(A, B и С).Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2 + BX + C = 0.
+            //Пользователь вводит 3 числа(A, B и С).
+            //Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2 + BX + C = 0.
+            Console.WriteLine("Введите число А");
+            double A4 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите число B");
+            double B4 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите число C");
+            double C4 = Convert.ToInt32(Console.ReadLine());
+            double Discr = B4 * B4 - 4 * A4 * C4;
+
+            if (Discr < 0)
+            {
+                Console.WriteLine("Корней не существует!");
+            }
+            else if (Discr == 0)
+            {
+                Console.WriteLine($"X1 = X2 = {-B4 / 2 * A4}");
+            }
+            else
+            {
+                double DiscrSqrt = Math.Sqrt(Discr);
+                Console.WriteLine($"X1= {(-B4 + DiscrSqrt) / 2 * A4}; X2= {(-B4 - DiscrSqrt) / 2 * A4}");
+            }
+
             //Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа.
             //                Например при вводе “25” в консоль будет выведено “двадцать пять”.
 
