@@ -27,7 +27,18 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"минимальный элемент массива - {arrayMin}");
+
             //Найти максимальный элемент массива
+            int arrayMax = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > arrayMax)
+                {
+                    arrayMax = array[i];
+                }
+            }
+            Console.WriteLine($"максимальный элемент массива - {arrayMax}");
+
             //Найти индекс минимального элемента массива
             //Найти индекс максимального элемента массива
             //Посчитать сумму элементов массива с нечетными индексами
