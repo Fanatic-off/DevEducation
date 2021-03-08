@@ -45,23 +45,21 @@ namespace HomeWork
             {
                 if (array[i] < arrayMin)
                 {
-                    arrayMin = array[i];
                     arrayMinIndex = i;
                 }
             }
-            Console.WriteLine($"минимальный элемент массива - {arrayMinIndex}");
+            Console.WriteLine($"индекс минимального элемента массива - {arrayMinIndex}");
 
             //Найти индекс максимального элемента массива
-            int arrayMaxIndex = array[0];
+            int arrayMaxIndex = 0;
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] > arrayMax)
                 {
-                    arrayMax = array[i];
                     arrayMaxIndex = i;
                 }
             }
-            Console.WriteLine($"максимальный элемент массива - {arrayMaxIndex}");
+            Console.WriteLine($"индекс максимального элемента массива - {arrayMaxIndex}");
 
             //Посчитать сумму элементов массива с нечетными индексами
             int arraySum = 0;
