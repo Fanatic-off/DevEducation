@@ -79,7 +79,57 @@ namespace HomeWork
                     Console.WriteLine("Координата принадлежит к III четверти");
                 }
             }
+
             //Пользователь вводит 3 числа(A, B и С).Выведите их в консоль в порядке возрастания.
+            Console.WriteLine("Введите число А");
+            int A3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите число B");
+            int B3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Введите число C");
+            int C3 = Convert.ToInt32(Console.ReadLine());
+
+            if (A3 > B3 || A3 > C3)
+            {
+                if (A3 > B3)
+                {
+                    if (B3 > C3)
+                    {
+                        Console.WriteLine($"{C3}, {B3}, {A3}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{B3}, {C3}, {A3}");
+                    }
+                }
+                else
+                {
+                    if (B3 > C3)
+                    {
+                        Console.WriteLine($"{C3}, {B3}, {A3}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{B3}, {C3}, {A3}");
+                    }
+
+                }
+            }
+            else
+            {
+                if (B3 > C3)
+                {
+                    Console.WriteLine($"{A3}, {C3}, {B3}");
+
+                }
+                else
+                {
+                    Console.WriteLine($"{A3}, {B3}, {C3}");
+
+                }
+            }
+
             //Пользователь вводит 3 числа(A, B и С).Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2 + BX + C = 0.
             //Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа.
             //                Например при вводе “25” в консоль будет выведено “двадцать пять”.
