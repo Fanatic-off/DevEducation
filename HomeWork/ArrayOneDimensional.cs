@@ -40,6 +40,17 @@ namespace HomeWork
             Console.WriteLine($"максимальный элемент массива - {arrayMax}");
 
             //Найти индекс минимального элемента массива
+            int arrayMinIndex = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < arrayMin)
+                {
+                    arrayMin = array[i];
+                    arrayMinIndex = i;
+                }
+            }
+            Console.WriteLine($"минимальный элемент массива - {arrayMinIndex}");
+
             //Найти индекс максимального элемента массива
             //Посчитать сумму элементов массива с нечетными индексами
             //Сделать реверс массива(массив в обратном направлении)
