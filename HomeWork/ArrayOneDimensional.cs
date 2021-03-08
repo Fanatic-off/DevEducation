@@ -8,7 +8,25 @@ namespace HomeWork
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
+            int[] array = new int[10];
+            for (int i = 0; i < array.Length; i++)
+            {
+                int varRandom = rnd.Next(0, 99);
+                array[i] = varRandom;
+                Console.Write($"{array[i]} ");
+            }
+            Console.WriteLine();
             //Найти минимальный элемент массива
+            int arrayMin = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < arrayMin)
+                {
+                    arrayMin = array[i];
+                }
+            }
+            Console.WriteLine($"минимальный элемент массива - {arrayMin}");
             //Найти максимальный элемент массива
             //Найти индекс минимального элемента массива
             //Найти индекс максимального элемента массива
