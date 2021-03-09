@@ -147,7 +147,24 @@ namespace HomeWork
 
             //Отсортировать массив по убыванию одним из способов, (отличным от способа в 9 - м задании) :  
             //                пузырьком(Bubble), выбором(Select) или вставками(Insert))
-
+            int[] arraySortRevers = new int[array.Length];//вставками(Insert)
+            array.CopyTo(arraySortRevers, 0);
+            for (int i = 0; i < array.Length; i++)
+            {
+                int j = i;
+                while (j > 0 && arraySortRevers[j - 1] < array[i])
+                {
+                    arraySortRevers[j] = arraySortRevers[j - 1];
+                    j--;
+                }
+                arraySortRevers[j] = array[i];
+            }
+            Console.Write("массив по убыванию - ");
+            for (int i = 0; i < arraySortRevers.Length; i++)
+            {
+                Console.Write($"{arraySortRevers[i]} ");
+            }
+            Console.WriteLine();
         }
     }
 }
