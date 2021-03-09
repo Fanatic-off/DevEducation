@@ -125,6 +125,26 @@ namespace HomeWork
             Console.WriteLine();
 
             //Отсортировать массив по возрастанию одним из способов: пузырьком(Bubble), выбором(Select) или вставками(Insert)) 
+            int[] arraySort = new int[array.Length];//BubbleSort
+            array.CopyTo(arraySort, 0);
+            for (int i = 0; i < arraySort.Length; i++)
+            {
+                for (int j = i + 1; j < arraySort.Length; j++)
+                {
+                    if (arraySort[i] > arraySort[j])
+                    {
+                        int x = arraySort[i];
+                        arraySort[i] = arraySort[j];
+                        arraySort[j] = x;
+                    }
+                }
+            }
+            for (int i = 0; i < arraySort.Length; i++)
+            {
+                Console.Write($"{arraySort[i]} ");
+            }
+            Console.WriteLine();
+
             //Отсортировать массив по убыванию одним из способов, (отличным от способа в 9 - м задании) :  
             //                пузырьком(Bubble), выбором(Select) или вставками(Insert))
 
