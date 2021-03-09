@@ -139,6 +139,7 @@ namespace HomeWork
                     }
                 }
             }
+            Console.Write("массив по возрастанию - ");
             for (int i = 0; i < arraySort.Length; i++)
             {
                 Console.Write($"{arraySort[i]} ");
