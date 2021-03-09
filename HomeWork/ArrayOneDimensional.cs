@@ -43,7 +43,7 @@ namespace HomeWork
             int arrayMinIndex = 0;
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] < arrayMin)
+                if (array[i] <= arrayMin)
                 {
                     arrayMinIndex = i;
                 }
@@ -54,7 +54,7 @@ namespace HomeWork
             int arrayMaxIndex = 0;
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] > arrayMax)
+                if (array[i] >= arrayMax)
                 {
                     arrayMaxIndex = i;
                 }
