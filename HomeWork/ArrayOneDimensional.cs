@@ -73,6 +73,18 @@ namespace HomeWork
             Console.WriteLine($"суммa элементов массива с нечетными индексами - {arraySum}");
 
             //Сделать реверс массива(массив в обратном направлении)
+            int[] arrayRevers = new int[array.Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                arrayRevers[array.Length - i - 1] = array[i];
+
+            }
+            Console.Write("реверс массива(массив в обратном направлении) - ");
+            for (int i = 0; i < arrayRevers.Length; i++)
+            {
+                Console.Write($"{arrayRevers[i]} ");
+            }
+
             //Посчитать количество нечетных элементов массива
             //Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2,  или для 12345 - 45312.
             //Отсортировать массив по возрастанию одним из способов: пузырьком(Bubble), выбором(Select) или вставками(Insert)) 
