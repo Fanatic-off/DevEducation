@@ -84,6 +84,7 @@ namespace HomeWork
             {
                 Console.Write($"{arrayRevers[i]} ");
             }
+            Console.WriteLine();
 
             //Посчитать количество нечетных элементов массива
             int oddNumberArray = 0;
