@@ -97,6 +97,32 @@ namespace HomeWork
             Console.WriteLine($"количество нечетных элементов массива - {oddNumberArray}");
 
             //Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2,  или для 12345 - 45312.
+            int[] arrayBackToForward = new int[array.Length];
+            if (array.Length % 2 != 0)
+            {
+                for (int i = 0; i < array.Length / 2; i++)
+                {
+                    arrayBackToForward[array.Length / 2 + i + 1] = array[i];
+                }
+            }
+            else
+            {
+                for (int i = 0; i < array.Length / 2; i++)
+                {
+                    arrayBackToForward[array.Length / 2 + i] = array[i];
+                }
+            }
+            for (int i = array.Length / 2; i < array.Length; i++)
+            {
+                arrayBackToForward[i - array.Length / 2] = array[i];
+            }
+            Console.Write("поменяли местами первую и вторую половину массива - ");
+            for (int i = 0; i < arrayBackToForward.Length; i++)
+            {
+                Console.Write($"{arrayBackToForward[i]} ");
+            }
+            Console.WriteLine();
+
             //Отсортировать массив по возрастанию одним из способов: пузырьком(Bubble), выбором(Select) или вставками(Insert)) 
             //Отсортировать массив по убыванию одним из способов, (отличным от способа в 9 - м задании) :  
             //                пузырьком(Bubble), выбором(Select) или вставками(Insert))
