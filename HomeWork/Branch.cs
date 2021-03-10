@@ -210,6 +210,9 @@ namespace HomeWork
                 case 11:
                     Console.WriteLine("одиннадцать");
                     break;
+                default:
+                    Console.WriteLine("Введите другое число");
+                    break;
             }
             //через if
             if (A5 < 10)
