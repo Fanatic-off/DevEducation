@@ -99,9 +99,24 @@ namespace HomeWork
             Console.WriteLine($"количество элементов массива, которые больше всех своих соседей одновременно - {count}");
 
             //Отразите массив относительно его главной диагонали
+            int[,] arrayTurn = new int[array.GetLength(1), array.GetLength(0)];
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    arrayTurn[j, i] = array[i, j];
+                }
+            }
+            Console.WriteLine("массив относительно его главной диагонали: ");
+            for (int i = 0; i < arrayTurn.GetLength(0); i++)
+            {
+                for (int j = 0; j < arrayTurn.GetLength(1); j++)
+                {
+                    Console.Write($"{arrayTurn[i, j]} ");
 
-
+                }
+                Console.WriteLine();
+            }
         }
-
     }
 }
