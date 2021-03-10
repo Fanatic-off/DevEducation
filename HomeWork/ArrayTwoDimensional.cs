@@ -81,6 +81,23 @@ namespace HomeWork
             Console.WriteLine($"индекс максимального элемента массива - {maxIndexI},{maxIndexJ}");
 
             //Найти количество элементов массива, которые больше всех своих соседей одновременно
+            int count = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if ((i <= 0 || array[i, j] > array[i - 1, j])
+                        && (i >= array.GetLength(0) - 1 || array[i, j] > array[i + 1, j])
+                        && (j <= 0 || array[i, j] > array[i, j - 1])
+                        && (j >= array.GetLength(1) - 1 || array[i, j] > array[i, j + 1]))
+                    {
+                        count++;
+                        Console.WriteLine($"{array[i, j]} i = {i} j = {j}");
+                    }
+                }
+            }
+            Console.WriteLine($"количество элементов массива, которые больше всех своих соседей одновременно - {count}");
+
             //Отразите массив относительно его главной диагонали
 
 
