@@ -4,7 +4,7 @@ namespace HomeWork
 {
     class Branch
     {
-        static void Main(string[] args)
+        private static void calculateTwoPoints()
         {
             //Пользователь вводит 2 числа(A и B).Если A > B, подсчитать A+B, если A = B, подсчитать A* B, если A < B, подсчитать A-B.
             Console.WriteLine("Введите целое число А");
@@ -26,6 +26,10 @@ namespace HomeWork
             {
                 result1 = A1 - B1;
             }
+        }
+
+        private static void printQuartersByTwoPoints()
+        {
             //Пользователь вводит 2 числа(X и Y).Определить какой четверти принадлежит точка с координатами(X, Y).
             Console.WriteLine("Введите число X");
             double A2 = Convert.ToInt32(Console.ReadLine());
@@ -79,7 +83,10 @@ namespace HomeWork
                     Console.WriteLine("Координата принадлежит к III четверти");
                 }
             }
+        }
 
+        private static void printTreePointsAsserdingOrder()
+        {
             //Пользователь вводит 3 числа(A, B и С).Выведите их в консоль в порядке возрастания.
             Console.WriteLine("Введите число А");
             int A3 = Convert.ToInt32(Console.ReadLine());
@@ -129,7 +136,10 @@ namespace HomeWork
 
                 }
             }
+        }
 
+        private static void printSolvingQuadraticEqution()
+        {
             //Пользователь вводит 3 числа(A, B и С).
             //Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2 + BX + C = 0.
             Console.WriteLine("Введите число А");
@@ -155,7 +165,10 @@ namespace HomeWork
                 double DiscrSqrt = Math.Sqrt(Discr);
                 Console.WriteLine($"X1= {(-B4 + DiscrSqrt) / 2 * A4}; X2= {(-B4 - DiscrSqrt) / 2 * A4}");
             }
+        }
 
+        private static void printStringNumberInputUserInt()
+        {
             //Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа.
             //Например при вводе “25” в консоль будет выведено “двадцать пять”.
             Console.WriteLine("Введите двузначное число");
@@ -364,8 +377,6 @@ namespace HomeWork
                     Console.Write("девять");
                 }
             }
-
-
         }
     }
 }
