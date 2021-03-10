@@ -4,20 +4,6 @@ namespace HomeWork
 {
 	class Variable
     {
-		static void Main(string[] args)
-        {
-            printSolving();
-
-            changeVariable();
-
-            printRemaiderOfDivision();
-
-            printSolvingLinearEquation();
-
-            printEquationLineOverTwoPoints();
-        }
-
-
         private static void printSolvingLinearEquation()
         {
             //Пользователь вводит 3 числа(A, B и С).Выведите в консоль решение(значение X) линейного уравнения стандартного вида, где A*X + B = C.
