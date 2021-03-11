@@ -8,6 +8,31 @@ namespace HomeWork
     {
         static void Main(string[] args)
         {
+            int[] array = createRandomArray();
+
+            int arrayMin = findMinElement(array);
+
+            int arrayMax = findMaxElement(array);
+
+            findIndexMinElement(array, arrayMin);
+
+            findIndexMaxElement(array, arrayMax);
+
+            calcSumElementOddIndex(array);
+
+            makeArrayRevers(array);
+
+            caltOddElementsOfArray(array);
+
+            swapHalfsArray(array);
+
+            sortArrayAscendingByBubbleSort(array);
+
+            sortArrayDescendingByInsert(array);
+        }
+
+        private static int[] createRandomArray()
+        {
             Random rnd = new Random();
             int[] array = new int[10];
             for (int i = 0; i < array.Length; i++)
@@ -17,6 +42,11 @@ namespace HomeWork
                 Console.Write($"{array[i]} ");
             }
             Console.WriteLine();
+            return array;
+        }
+
+        private static int findMinElement(int[] array)
+        {
             //Найти минимальный элемент массива
             int arrayMin = array[0];
             for (int i = 0; i < array.Length; i++)
@@ -27,7 +57,11 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"минимальный элемент массива - {arrayMin}");
+            return arrayMin;
+        }
 
+        private static int findMaxElement(int[] array)
+        {
             //Найти максимальный элемент массива
             int arrayMax = array[0];
             for (int i = 0; i < array.Length; i++)
@@ -38,7 +72,11 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"максимальный элемент массива - {arrayMax}");
+            return arrayMax;
+        }
 
+        private static void findIndexMinElement(int[] array, int arrayMin)
+        {
             //Найти индекс минимального элемента массива
             int arrayMinIndex = 0;
             for (int i = 0; i < array.Length; i++)
@@ -49,7 +87,10 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"индекс минимального элемента массива - {arrayMinIndex}");
+        }
 
+        private static void findIndexMaxElement(int[] array, int arrayMax)
+        {
             //Найти индекс максимального элемента массива
             int arrayMaxIndex = 0;
             for (int i = 0; i < array.Length; i++)
@@ -60,7 +101,10 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"индекс максимального элемента массива - {arrayMaxIndex}");
+        }
 
+        private static void calcSumElementOddIndex(int[] array)
+        {
             //Посчитать сумму элементов массива с нечетными индексами
             int arraySum = 0;
             for (int i = 0; i < array.Length; i++)
@@ -71,7 +115,10 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"суммa элементов массива с нечетными индексами - {arraySum}");
+        }
 
+        private static void makeArrayRevers(int[] array)
+        {
             //Сделать реверс массива(массив в обратном направлении)
             int[] arrayRevers = new int[array.Length];
             for (int i = 0; i < array.Length; i++)
@@ -85,7 +132,10 @@ namespace HomeWork
                 Console.Write($"{arrayRevers[i]} ");
             }
             Console.WriteLine();
+        }
 
+        private static void caltOddElementsOfArray(int[] array)
+        {
             //Посчитать количество нечетных элементов массива
             int oddNumberArray = 0;
             for (int i = 0; i < array.Length; i++)
@@ -96,7 +146,10 @@ namespace HomeWork
                 }
             }
             Console.WriteLine($"количество нечетных элементов массива - {oddNumberArray}");
+        }
 
+        private static void swapHalfsArray(int[] array)
+        {
             //Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2,  или для 12345 - 45312.
             int[] arrayBackToForward = new int[array.Length];
             if (array.Length % 2 != 0)
@@ -123,9 +176,12 @@ namespace HomeWork
                 Console.Write($"{arrayBackToForward[i]} ");
             }
             Console.WriteLine();
+        }
 
+        private static void sortArrayAscendingByBubbleSort(int[] array)
+        {
             //Отсортировать массив по возрастанию одним из способов: пузырьком(Bubble), выбором(Select) или вставками(Insert)) 
-            int[] arraySort = new int[array.Length];//BubbleSort
+            int[] arraySort = new int[array.Length];
             array.CopyTo(arraySort, 0);
             for (int i = 0; i < arraySort.Length; i++)
             {
@@ -145,10 +201,13 @@ namespace HomeWork
                 Console.Write($"{arraySort[i]} ");
             }
             Console.WriteLine();
+        }
 
+        private static void sortArrayDescendingByInsert(int[] array)
+        {
             //Отсортировать массив по убыванию одним из способов, (отличным от способа в 9 - м задании) :  
-            //                пузырьком(Bubble), выбором(Select) или вставками(Insert))
-            int[] arraySortRevers = new int[array.Length];//вставками(Insert)
+            //пузырьком(Bubble), выбором(Select) или вставками(Insert))
+            int[] arraySortRevers = new int[array.Length];
             array.CopyTo(arraySortRevers, 0);
             for (int i = 0; i < array.Length; i++)
             {
