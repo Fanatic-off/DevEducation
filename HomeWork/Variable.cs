@@ -31,7 +31,7 @@ namespace HomeWork
 
             int result2 = A2;
             A2 = B2;
-            B2 = A2;
+            B2 = result2;
         }
 
         private static void PrintRemaiderOfDivision()
