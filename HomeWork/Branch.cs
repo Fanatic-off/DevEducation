@@ -4,7 +4,7 @@ namespace HomeWork
 {
     class Branch
     {
-        private static void calculateTwoPoints()
+        private static void CalculateTwoPoints()
         {
             //Пользователь вводит 2 числа(A и B).Если A > B, подсчитать A+B, если A = B, подсчитать A* B, если A < B, подсчитать A-B.
             Console.WriteLine("Введите целое число А");
@@ -28,7 +28,7 @@ namespace HomeWork
             }
         }
 
-        private static void printQuartersByTwoPoints()
+        private static void PrintQuartersByTwoPoints()
         {
             //Пользователь вводит 2 числа(X и Y).Определить какой четверти принадлежит точка с координатами(X, Y).
             Console.WriteLine("Введите число X");
@@ -85,7 +85,7 @@ namespace HomeWork
             }
         }
 
-        private static void printTreePointsAsserdingOrder()
+        private static void PrintTreePointsAsserdingOrder()
         {
             //Пользователь вводит 3 числа(A, B и С).Выведите их в консоль в порядке возрастания.
             Console.WriteLine("Введите число А");
@@ -138,7 +138,7 @@ namespace HomeWork
             }
         }
 
-        private static void printSolvingQuadraticEqution()
+        private static void PrintSolvingQuadraticEqution()
         {
             //Пользователь вводит 3 числа(A, B и С).
             //Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2 + BX + C = 0.
@@ -167,7 +167,7 @@ namespace HomeWork
             }
         }
 
-        private static void printStringNumberInputUserInt()
+        private static void PrintStringNumberInputUserInt()
         {
             //Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа.
             //Например при вводе “25” в консоль будет выведено “двадцать пять”.
