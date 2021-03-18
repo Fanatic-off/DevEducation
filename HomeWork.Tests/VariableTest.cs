@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace HomeWork.Tests
 {
-    public class Tests
+    public class VariableTest
     {
 
         [TestCase(1, 2, 9)]
