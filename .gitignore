@@ -1,2 +1,14 @@
 
 .vs/DevEducation/v16/.suo
+
+*.cache
+
+*.testlog
+
+*.manifest
+
+*.dll
+
+*.pdb
+
+*.v2
