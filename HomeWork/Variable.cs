@@ -54,6 +54,10 @@ namespace HomeWork
 
             Console.WriteLine("Введите целое число A");
             int A4 = Convert.ToInt32(Console.ReadLine());
+            if (A4 == 0)
+            {
+                throw new Exception("Can't divide by zero!");
+            }
 
             Console.WriteLine("Введите второе целое число B");
             int B4 = Convert.ToInt32(Console.ReadLine());
