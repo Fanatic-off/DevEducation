@@ -51,23 +51,25 @@ namespace HomeWork
             }
         }
 
-        public static void PrintGreatestDivisor(int a)
+        public static int PrintGreatestDivisor(int a)
         {
             //Пользователь вводит 1 число(A).Вывести наибольший делитель(кроме самого A) 
             //числа A.
             Console.WriteLine("Введите целое положительное число");
             a = Convert.ToInt32(Console.ReadLine());
             int b = 1;
+            int result = a;
 
             for (int i = 2; i < a / 2; i++)
             {
                 if (a % i == 0)
                 {
-                    int result = a / i;
+                    result = a / i;
                     Console.WriteLine($" Число {result} является наибольший делителем");
                     break;
                 }
             }
+            return result;
         }
 
         public static int PrintSumInputNumbersDividedBySeven(int a, int b)
