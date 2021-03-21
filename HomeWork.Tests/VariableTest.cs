@@ -10,31 +10,37 @@ namespace HomeWork.Tests
         [TestCase(5, 6, 61)]
         public void PrintSolvingTest(int a, int b, int expected)
         {
-            int actual = (5 * a + b * b) / (b - a);
+            int actual = Variable.PrintSolving(a, b);
 
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(2, 1, true)]
-        [TestCase(4, 10, true)]
-        [TestCase(-5, 20, true)]
-        public void ChangeVariableTest(int a, int b, bool expected)
+        [TestCase(2, 1)]
+        [TestCase(4, 10)]
+        [TestCase(-5, 20)]
+        public void ChangeVariableTest(ref int a, ref int b)
         {
-            bool actual = false;
+            Variable.ChangeVariable(ref a, ref b);
 
-            int tmp1 = a;
-            int tmp2 = b;
-            
-            int tmp = a;
-            a = b;
-            b = tmp;
+            int actualA = a;
+            int actualB = b;
 
-            if ((tmp1 == b) && (tmp2 == a))
-            {
-                actual = true;
-            }
+            int expectedA = b;
+            int expectedB = a;
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expectedA, actualB);
+            Assert.AreEqual(expectedB, actualB);
+        }
+
+        [TestCase(10, 2, 5, 0)]
+        public void PrintRemaiderOfDivision(int a, int b, int expectedDivision, int expectedRemains)
+        {
+            int actualDivision = a / b;
+            int actualRemains = a % b;
+
+            Assert.AreEqual(expectedDivision, actualDivision);
+            Assert.AreEqual(expectedRemains, actualRemains);
+
         }
 
         [TestCase(1, 2, 3, 1)]
@@ -42,7 +48,7 @@ namespace HomeWork.Tests
         [TestCase(3, 22, 55, 11)]
         public void PrintSolvingLinearEquationTest(int a, int b, int c, int expected)
         {
-            int actual = (c - b) / a;
+            int actual = Variable.PrintSolvingLinearEquation(a, b, c);
 
             Assert.AreEqual(expected, actual);
         }
