@@ -22,138 +22,142 @@ namespace HomeWork
             return result;
         }
 
-        public static void printNumberDividedByInput()
+        public static void printNumberDividedByInput(int a)
         {
             //Пользователь вводит 1 число(A).Вывести все числа от 1 до 1000, которые делятся на A.
             Console.WriteLine("Введите целое положительное число");
-            int A2 = Convert.ToInt32(Console.ReadLine());
-            int B2 = 1000;
+            a = Convert.ToInt32(Console.ReadLine());
+            int b = 1000;
 
-            for (int i = 0; i < B2; i++)
+            for (int i = 0; i < b; i++)
             {
-                if (i % A2 == 0)
+                if (i % a == 0)
                     Console.WriteLine($"{i}");
             }
         }
 
-        public static void printCountNumberSquareLessInput()
+        public static void printCountNumberSquareLessInput(int a)
         {
             //Пользователь вводит 1 число(A).Найдите количество положительных целых чисел, 
             //квадрат которых меньше A.
             Console.WriteLine("Введите целое положительное число");
-            int A3 = Convert.ToInt32(Console.ReadLine());
-            int B3 = 1;
+            a = Convert.ToInt32(Console.ReadLine());
+            int b = 1;
 
-            while (B3 * B3 < A3)
+            while (b * b < a)
             {
-                Console.WriteLine($"{B3}");
-                B3++;
+                Console.WriteLine($"{b}");
+                b++;
             }
         }
 
-        public static void printGreatestDivisor()
+        public static void printGreatestDivisor(int a)
         {
             //Пользователь вводит 1 число(A).Вывести наибольший делитель(кроме самого A) 
             //числа A.
             Console.WriteLine("Введите целое положительное число");
-            int A4 = Convert.ToInt32(Console.ReadLine());
-            int B4 = 1;
+            a = Convert.ToInt32(Console.ReadLine());
+            int b = 1;
 
-            for (int i = 2; i < A4 / 2; i++)
+            for (int i = 2; i < a / 2; i++)
             {
-                if (A4 % i == 0)
+                if (a % i == 0)
                 {
-                    int result4 = A4 / i;
-                    Console.WriteLine($" Число {result4} является наибольший делителем");
+                    int result = a / i;
+                    Console.WriteLine($" Число {result} является наибольший делителем");
                     break;
                 }
             }
         }
 
-        public static void printSumInputNumbersDividedBySeven()
+        public static int printSumInputNumbersDividedBySeven(int a, int b)
         {
             //Пользователь вводит 2 числа(A и B).Вывести сумму всех чисел из диапазона от A до B, 
             //которые делятся без остатка на 7. (Учтите, что при вводе B может оказаться меньше A).
             Console.WriteLine("Введите первое целое число");
-            int A5 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое число");
-            int B5 = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
-            int result5 = 0;
-            if (A5 <= B5)
+            int c = 7;
+            int result = 0;
+            if (a <= b)
             {
-                for (int i = A5; i < B5; i++)
+                for (int i = a; i < b; i++)
                 {
-                    if (i % 7 == 0)
+                    if (i % c == 0)
                     {
-                        result5 += i;
+                        result += i;
                     }
                 }
             }
             else
             {
-                for (int i = B5; i < A5; i++)
+                for (int i = b; i < a; i++)
                 {
-                    if (i % 7 == 0)
+                    if (i % c == 0)
                     {
-                        result5 += i;
+                        result += i;
                     }
                 }
             }
-            Console.WriteLine($"{result5} - сумма всех чисел из диапазона, которые делятся без остатка на 7");
+            Console.WriteLine($"{result} - сумма всех чисел из диапазона, которые делятся без остатка на 7");
+            return result;
         }
 
-        public static void printInputNumberInFibonacciSeries()
+        public static int printInputNumberInFibonacciSeries(int a)
         {
             //Пользователь вводит 1 число(N).Выведите N - ое число ряда фибоначчи.
             //В ряду фибоначчи каждое cледующее число является суммой двух предыдущих. 
             //Первое и второе считаются равными 1.
             Console.WriteLine("Введите целое положительное число");
-            int A6 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
             int fiboBig = 1;
             int fiboSmall = 1;
-            int result6 = 0;
+            int result = 0;
 
-            for (int i = 0; i < A6; i++)
+            for (int i = 0; i < a; i++)
             {
                 fiboSmall = fiboBig;
-                fiboBig = result6;
-                result6 = fiboSmall + fiboBig;
+                fiboBig = result;
+                result = fiboSmall + fiboBig;
             }
-            Console.WriteLine($"{result6}");
+            Console.WriteLine($"{result}");
+            return result;
         }
 
-        public static void findCommonDivisorByEvklid()
+        public static void findCommonDivisorByEvklid(int a, int b)
         {
             //Пользователь вводит 2 числа.Найти их наибольший общий делитель используя алгоритм Евклида.
             Console.WriteLine("Введите первое целое число");
-            int A7 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите второе целое число");
-            int B7 = Convert.ToInt32(Console.ReadLine());
-            int result7 = 1;
+            a = Convert.ToInt32(Console.ReadLine());
 
-            while (A7 != B7)
+            Console.WriteLine("Введите второе целое число");
+            b = Convert.ToInt32(Console.ReadLine());
+            int result = 1;
+
+            while (a != b)
             {
-                if (A7 < B7)
+                if (a < b)
                 {
-                    B7 = B7 - A7;
+                    b = b - a;
                 }
                 else
                 {
-                    A7 = A7 - B7;
+                    a = a - b;
                 }
             }
-            Console.WriteLine($"{A7} - наибольший общий делитель");
+            Console.WriteLine($"{a} - наибольший общий делитель");
         }
 
-        public static void printPowThirdDegreeByHalfDivision()
+        public static int printPowThirdDegreeByHalfDivision(int a)
         {
             //Пользователь вводит целое положительное число, которое является кубом целого числа N. 
             //Найдите число N методом половинного деления.
             Console.WriteLine("Введите целое положительное число");
-            int A8 = Convert.ToInt32(Console.ReadLine());
-            int Right = A8;
+            a = Convert.ToInt32(Console.ReadLine());
+            int Right = a;
             int Left = 0;
             int N = (Left + Right) / 2;
 
@@ -173,15 +177,15 @@ namespace HomeWork
             //}
 
             // второй вариант
-            while (N * N * N != A8)
+            while (N * N * N != a)
             {
-                if (N * N * N <= A8 &&
-                    (N + 1) * (N + 1) * (N + 1) > A8)
+                if (N * N * N <= a &&
+                    (N + 1) * (N + 1) * (N + 1) > a)
                 {
                     Console.WriteLine(N);
-                    return;
+                    return N;
                 }
-                else if (N * N * N < A8)
+                else if (N * N * N < a)
                 {
                     Left = (Left + Right / 2) / 2;
                     N = (Left + Right) / 2;
@@ -192,56 +196,60 @@ namespace HomeWork
                     N = (Left + Right) / 2;
                 }
             }
+            return N;
         }
 
-        public static void printCountOddNumber()
+        public static int printCountOddNumber(int a)
         {
             //Пользователь вводит 1 число.Найти количество нечетных цифр этого числа.
             Console.WriteLine("Введите целое положительное число");
-            int A9 = Convert.ToInt32(Console.ReadLine());
-            int result9 = 0;
-            for (int i = 10; i < A9 * 10; i *= 10)
+            a = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
+
+            for (int i = 10; i < a * 10; i *= 10)
             {
-                if ((A9 / i) % 2 != 0)
+                if ((a / i) % 2 != 0)
                 {
-                    result9++;
+                    result++;
                 }
             }
-            Console.WriteLine($"{result9}");
+            Console.WriteLine($"{result}");
+            return result;
         }
 
-        public static void printNumberMirrorImage()
+        public static int printNumberMirrorImage(int a)
         {
             //Пользователь вводит 1 число.Найти число, которое является зеркальным отображением 
             //последовательности цифр заданного числа, например, задано число 123, вывести 321.
             Console.WriteLine("Введите целое положительное число");
-            int A10 = Convert.ToInt32(Console.ReadLine());
-            int result10 = 0;
+            a = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
 
-            for (int i = 10; i < A10 * 10; i *= 10)
+            for (int i = 10; i < a * 10; i *= 10)
             {
-                if (A10 % i < 10)
+                if (a % i < 10)
                 {
-                    result10 = A10 % i;
+                    result = a % i;
                 }
                 else
                 {
-                    result10 = result10 * 10 + (A10 % i) / (i / 10);
-                    Console.WriteLine($"{result10}");
+                    result = result * 10 + (a % i) / (i / 10);
+                    Console.WriteLine($"{result}");
                 }
             }
+            return result;
         }
 
-        public static void printNumbersSumEvenMoreSumOdd()
+        public static void printNumbersSumEvenMoreSumOdd(int a)
         {
-            //Пользователь вводит целое положительное  число(N).Выведите числа в диапазоне от 1 до N, 
+            //Пользователь вводит целое положительное число(N).Выведите числа в диапазоне от 1 до N, 
             //сумма четных цифр которых больше суммы нечетных. 
             Console.WriteLine("Введите целое положительное число");
-            int A11 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
             int resultEven = 0;
             int resultOdd = 0;
 
-            for (int i = 0; i < A11; i++)
+            for (int i = 0; i < a; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -258,16 +266,16 @@ namespace HomeWork
             }
         }
 
-        public static void printAnswerIfSameNumber()
+        public static void printAnswerIfSameNumber(int a, int b)
         {
             //Пользователь вводит 2 числа.Сообщите, есть ли в написании двух чисел одинаковые цифры. 
             //Например, для пары 123 и 3456789, ответом будет являться “ДА”, 
             //а, для пары 500 и 99 - “НЕТ”.
             Console.WriteLine("Введите первое целое положительное число");
-            int A12 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое положительное число");
-            int B11 = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
             int resultA = 0;
             int resultB = 0;
@@ -275,19 +283,19 @@ namespace HomeWork
             string yes = "ДА";
             string no = "НЕТ";
 
-            for (int i = 10; i < A12 * 10; i *= 10)
+            for (int i = 10; i < a * 10; i *= 10)
             {
-                resultA = (A12 % i) / (i / 10);
-                for (int j = 10; j < B11 * 10; j *= 10)
+                resultA = (a % i) / (i / 10);
+                for (int j = 10; j < b * 10; j *= 10)
                 {
-                    resultB = (B11 % j) / (j / 10);
+                    resultB = (b % j) / (j / 10);
                     if (resultA == resultB)
                     {
                         Console.WriteLine(yes);
                         return;
                     }
                 }
-                if (i > A12)
+                if (i > a)
                 {
                     Console.WriteLine(no);
                     return;
