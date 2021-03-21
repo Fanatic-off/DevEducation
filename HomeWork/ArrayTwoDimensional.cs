@@ -4,26 +4,26 @@ using System.Text;
 
 namespace HomeWork
 {
-    class ArrayTwoDimensional
+    public class ArrayTwoDimensional
     {
-        public static void Main(String[] args)
-        {
-            int[,] array = createRandomArray();
+        //public static void Main(String[] args)
+        //{
+        //    int[,] array = createRandomArray();
 
-            int min = findMinElement(array);
+        //    int min = findMinElement(array);
 
-            int max = findMaxElement(array);
+        //    int max = findMaxElement(array);
 
-            findIndexMinElement(array, min);
+        //    findIndexMinElement(array, min);
 
-            findIndexMaxElement(array, max);
+        //    findIndexMaxElement(array, max);
 
-            findNumberElementLargerNeighbors(array);
+        //    findNumberElementLargerNeighbors(array);
 
-            reflectRelativeMainDiagonal(array);
-        }
+        //    reflectRelativeMainDiagonal(array);
+        //}
 
-        private static int[,] createRandomArray()
+        public static int[,] CreateRandomArray()
         {
             Random rnd = new Random();
             int[,] array = new int[5, 5];
@@ -41,7 +41,7 @@ namespace HomeWork
             return array;
         }
 
-        private static int findMinElement(int[,] array)
+        public static int FindMinElement(int[,] array)
         {
             //Найти минимальный элемент массива
             int min = array[0, 0];
@@ -59,7 +59,7 @@ namespace HomeWork
             return min;
         }
 
-        private static int findMaxElement(int[,] array)
+        public static int FindMaxElement(int[,] array)
         {
             //Найти максимальный элемент массива
             int max = array[0, 0];
@@ -77,7 +77,7 @@ namespace HomeWork
             return max;
         }
 
-        private static void findIndexMinElement(int[,] array, int min)
+        public static void FindIndexMinElement(int[,] array, int min)
         {
             //Найти индекс минимального элемента массива
             int minIndexI = 0;
@@ -96,7 +96,7 @@ namespace HomeWork
             Console.WriteLine($"индекс минимального элемента массива - {minIndexI},{minIndexJ} ");
         }
 
-        private static void findIndexMaxElement(int[,] array, int max)
+        public static void FindIndexMaxElement(int[,] array, int max)
         {
             //Найти индекс максимального элемента массива
             int maxIndexI = 0;
@@ -115,7 +115,7 @@ namespace HomeWork
             Console.WriteLine($"индекс максимального элемента массива - {maxIndexI},{maxIndexJ}");
         }
 
-        private static void findNumberElementLargerNeighbors(int[,] array)
+        public static void FindNumberElementLargerNeighbors(int[,] array)
         {
             //Найти количество элементов массива, которые больше всех своих соседей одновременно
             int count = 0;
@@ -136,7 +136,7 @@ namespace HomeWork
             Console.WriteLine($"количество элементов массива, которые больше всех своих соседей одновременно - {count}");
         }
 
-        private static void reflectRelativeMainDiagonal(int[,] array)
+        public static void ReflectRelativeMainDiagonal(int[,] array)
         {
             //Отразите массив относительно его главной диагонали
             int[,] arrayTurn = new int[array.GetLength(1), array.GetLength(0)];
