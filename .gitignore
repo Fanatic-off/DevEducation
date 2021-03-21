@@ -14,3 +14,9 @@
 *.v2
 
 *.tmp
+
+*.json
+
+HomeWork.Tests/obj/Debug/net5.0/HomeWork.Tests.csproj.FileListAbsolute.txt
+
+HomeWork.Tests/bin/Debug/net5.0/HomeWork.exe
