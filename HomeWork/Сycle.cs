@@ -2,26 +2,27 @@
 
 namespace HomeWork
 {
-    class Сycle
+    public class Сycle
     {
-        private static void printDegreeInputNumber()
+        public static int printDegreeInputNumber(int a, int b)
         {
             //Пользователь вводит 2 числа(A и B).Возвести число A в степень B.
             Console.WriteLine("Введите первое целое число");
-            int A = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое число");
-            int B = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
             int result = 1;
-            for (int i = 0; i < B; i++)
+            for (int i = 0; i < b; i++)
             {
-                result *= A;
+                result *= a;
             }
-            Console.WriteLine($"{ result}");
+
+            return result;
         }
 
-        private static void printNumberDividedByInput()
+        public static void printNumberDividedByInput()
         {
             //Пользователь вводит 1 число(A).Вывести все числа от 1 до 1000, которые делятся на A.
             Console.WriteLine("Введите целое положительное число");
@@ -35,7 +36,7 @@ namespace HomeWork
             }
         }
 
-        private static void printCountNumberSquareLessInput()
+        public static void printCountNumberSquareLessInput()
         {
             //Пользователь вводит 1 число(A).Найдите количество положительных целых чисел, 
             //квадрат которых меньше A.
@@ -50,7 +51,7 @@ namespace HomeWork
             }
         }
 
-        private static void printGreatestDivisor()
+        public static void printGreatestDivisor()
         {
             //Пользователь вводит 1 число(A).Вывести наибольший делитель(кроме самого A) 
             //числа A.
@@ -69,7 +70,7 @@ namespace HomeWork
             }
         }
 
-        private static void printSumInputNumbersDividedBySeven()
+        public static void printSumInputNumbersDividedBySeven()
         {
             //Пользователь вводит 2 числа(A и B).Вывести сумму всех чисел из диапазона от A до B, 
             //которые делятся без остатка на 7. (Учтите, что при вводе B может оказаться меньше A).
@@ -103,7 +104,7 @@ namespace HomeWork
             Console.WriteLine($"{result5} - сумма всех чисел из диапазона, которые делятся без остатка на 7");
         }
 
-        private static void printInputNumberInFibonacciSeries()
+        public static void printInputNumberInFibonacciSeries()
         {
             //Пользователь вводит 1 число(N).Выведите N - ое число ряда фибоначчи.
             //В ряду фибоначчи каждое cледующее число является суммой двух предыдущих. 
@@ -123,7 +124,7 @@ namespace HomeWork
             Console.WriteLine($"{result6}");
         }
 
-        private static void findCommonDivisorByEvklid()
+        public static void findCommonDivisorByEvklid()
         {
             //Пользователь вводит 2 числа.Найти их наибольший общий делитель используя алгоритм Евклида.
             Console.WriteLine("Введите первое целое число");
@@ -146,7 +147,7 @@ namespace HomeWork
             Console.WriteLine($"{A7} - наибольший общий делитель");
         }
 
-        private static void printPowThirdDegreeByHalfDivision()
+        public static void printPowThirdDegreeByHalfDivision()
         {
             //Пользователь вводит целое положительное число, которое является кубом целого числа N. 
             //Найдите число N методом половинного деления.
@@ -193,7 +194,7 @@ namespace HomeWork
             }
         }
 
-        private static void printCountOddNumber()
+        public static void printCountOddNumber()
         {
             //Пользователь вводит 1 число.Найти количество нечетных цифр этого числа.
             Console.WriteLine("Введите целое положительное число");
@@ -209,7 +210,7 @@ namespace HomeWork
             Console.WriteLine($"{result9}");
         }
 
-        private static void printNumberMirrorImage()
+        public static void printNumberMirrorImage()
         {
             //Пользователь вводит 1 число.Найти число, которое является зеркальным отображением 
             //последовательности цифр заданного числа, например, задано число 123, вывести 321.
@@ -231,7 +232,7 @@ namespace HomeWork
             }
         }
 
-        private static void printNumbersSumEvenMoreSumOdd()
+        public static void printNumbersSumEvenMoreSumOdd()
         {
             //Пользователь вводит целое положительное  число(N).Выведите числа в диапазоне от 1 до N, 
             //сумма четных цифр которых больше суммы нечетных. 
@@ -257,7 +258,7 @@ namespace HomeWork
             }
         }
 
-        private static void printAnswerIfSameNumber()
+        public static void printAnswerIfSameNumber()
         {
             //Пользователь вводит 2 числа.Сообщите, есть ли в написании двух чисел одинаковые цифры. 
             //Например, для пары 123 и 3456789, ответом будет являться “ДА”, 
