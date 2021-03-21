@@ -2,21 +2,21 @@
 
 namespace HomeWork
 {
-    public class Сycle
+    public class Сircle
     {
-        public static int PrintDegreeInputNumber(int a, int b)
+        public static int PrintExtentInputNumber(int number, int extent)
         {
             //Пользователь вводит 2 числа(A и B).Возвести число A в степень B.
             Console.WriteLine("Введите первое целое число");
-            a = Convert.ToInt32(Console.ReadLine());
+            number = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое число");
-            b = Convert.ToInt32(Console.ReadLine());
+            extent = Convert.ToInt32(Console.ReadLine());
 
             int result = 1;
-            for (int i = 0; i < b; i++)
+            for (int i = 0; i < extent; i++)
             {
-                result *= a;
+                result *= number;
             }
 
             return result;
