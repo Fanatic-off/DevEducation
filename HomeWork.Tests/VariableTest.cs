@@ -10,7 +10,7 @@ namespace HomeWork.Tests
         [TestCase(5, 6, 61)]
         public void PrintSolvingTest(int a, int b, int expected)
         {
-            int actual = Variable.PrintSolving(a, b);
+            int actual = Variable.PrintSolving(ref a, ref b);
 
             Assert.AreEqual(expected, actual);
         }
