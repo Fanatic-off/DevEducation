@@ -2,74 +2,76 @@
 
 namespace HomeWork
 {
-	class Variable
+	public class Variable
     {
 
-        private static void PrintSolving()
+        public static int PrintSolving(ref int a, ref int b)
         {
             //Пользователь вводит 2 числа(A и B).Выведите в консоль решение (5 * A + B*B)/(B - A)
 
             Console.WriteLine("Введите первое целое число");
-            int A1 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое число");
-            int B1 = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
-            int result = (5 * A1 + B1 * B1) / (B1 - A1);
+            int result = (5 * a + b * b) / (b - a);
             Console.WriteLine($"{result}");
+            return result;
         }
 
-        private static void ChangeVariable()
+        public static void ChangeVariable(ref int a, ref int b)
         {
             //Пользователь вводит 2 значения(A и B).Поменяйте содержимое переменных A и B местами.
 
             Console.WriteLine("Введите целое число A");
-            int A2 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое число B");
-            int B2 = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
-            int result2 = A2;
-            A2 = B2;
-            B2 = result2;
+            int result2 = a;
+            a = b;
+            b = result2;
         }
 
-        private static void PrintRemaiderOfDivision()
+        public static void PrintRemaiderOfDivision(int a, int b)
         {
             //Пользователь вводит 2 числа(A и B).Выведите в консоль результат деления A на B и остаток от деления.
 
             Console.WriteLine("Введите целое число A");
-            int A3 = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите второе целое число B");
-            int B3 = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"результат деления -{A3 / B3}");
-            Console.WriteLine($"остаток от деления - {A3 % B3}");
+            Console.WriteLine($"результат деления -{a / b}");
+            Console.WriteLine($"остаток от деления - {a % b}");
         }
 
-        private static void PrintSolvingLinearEquation()
+        public static int PrintSolvingLinearEquation(int a, int b, int c)
         {
             //Пользователь вводит 3 числа(A, B и С).Выведите в консоль решение(значение X) линейного уравнения стандартного вида, где A*X + B = C.
 
             Console.WriteLine("Введите целое число A");
-            int A4 = Convert.ToInt32(Console.ReadLine());
-            if (A4 == 0)
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a == 0)
             {
                 throw new Exception("Can't divide by zero!");
             }
 
             Console.WriteLine("Введите второе целое число B");
-            int B4 = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите третье целое число C");
-            int C4 = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
 
-            int result4 = (C4 - B4) / A4;
-            Console.WriteLine($"{result4}");
+            int result = (c - b) / a;
+            Console.WriteLine($"{result}");
+            return result;
         }
 
-        private static void PrintEquationLineOverTwoPoints()
+        public static void PrintEquationLineOverTwoPoints()
         {         
             //Пользователь вводит 4 числа(X1, Y1, X2, Y2), описывающие координаты 2 - х точек на координатной плоскости.
             //	Выведите уравнение прямой в формате Y = AX + B, проходящей через эти точки.
