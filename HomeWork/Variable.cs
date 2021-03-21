@@ -4,7 +4,6 @@ namespace HomeWork
 {
 	public class Variable
     {
-
         public static int PrintSolving(ref int a, ref int b)
         {
             //Пользователь вводит 2 числа(A и B).Выведите в консоль решение (5 * A + B*B)/(B - A)
